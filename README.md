@@ -12,7 +12,10 @@ Event WebHooks service.
 In order to make reasonable use of this code you'll need to have your own development staff to do the work.
 The presence of this code is not meant to imply that DirectScale is available to consult on your implementation
 of this service.  You should assume that the structure/content of the data being sent by DirectScale will change
-from time to time.  Wherever possible, such changes will 
+from time to time.  Wherever possible, such changes will be released by means of creating a newer version hook which
+you can provide a new API endpoint to DirectScale in order to start receiving the newer format data.  This should
+prevent an established API from being disrupted, but will require additional work to receive new data from time
+to time.
 
 ## What Should I Do With This Project?
 1. Before you can do anything you'll likely need to setup a build pipeline and hosting for this service.
