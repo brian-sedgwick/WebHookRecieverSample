@@ -26,6 +26,7 @@ events must accept POST data without requiring any authentication or authorizati
 ### Enrollment Event V1
 The Enrollment Event is fired any time a new customer or distributor is enrolled.
 
+```csharp
 public class Enrollment
 {
     public string DistributorId { get; set; }
@@ -36,10 +37,12 @@ public class Enrollment
     public DateTime EnrollmentDateUtc { get; set; }
     public DateTime EventDateUtc { get; set; }
 }
+```
 
 ### Order Event V1
 The Order Event is fired any time an order is placed and includes autoship orders as well as incidental orders.
 
+```csharp
 public class Order
 {
     public string OrderId { get; set; }
@@ -52,3 +55,4 @@ public class Order
     public string OrderStatus { get; set; }
     public DateTime EventDateUtc { get; set; }
 }
+```
